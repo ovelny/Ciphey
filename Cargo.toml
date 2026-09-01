@@ -50,7 +50,7 @@ serial_test = "4.0.1"
 text_io = "0.1.13"
 toml = "1.1.2"
 uuid = "1.23.3"
-rand = "0.8"  # Required for candle-core compatibility
+rand = "0.9"  # Required for candle-core compatibility
 half = "=2.7.1"  # Required for candle-core compatibility
 
 # Dependencies used for decoding
