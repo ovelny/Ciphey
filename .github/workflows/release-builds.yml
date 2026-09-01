@@ -77,7 +77,7 @@ jobs:
           $asset = "${{ matrix.asset_name }}"
           Compress-Archive -Path "target/${{ matrix.target }}/release/${{ matrix.artifact_name }}" -DestinationPath $asset
           $hash = (Get-FileHash -Algorithm SHA256 $asset).Hash.ToLower()
-          "$hash  $asset" | Out-File -Encoding ascii "$asset.sha256"
+          "$hash  $asset" | Set-Content -NoNewline -Encoding ascii "$asset.sha256"
 
       - name: Upload release assets
         env:
