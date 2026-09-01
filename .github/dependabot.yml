@@ -13,4 +13,6 @@ updates:
     # Later versions compile with incompatible rand traits and break every build.
     ignore:
       - dependency-name: "rand"
+        versions: [">= 0.9"]
       - dependency-name: "half"
+        versions: [">= 2.4"]
