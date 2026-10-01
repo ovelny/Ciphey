@@ -75,6 +75,10 @@ impl Crack for Decoder<CitrixCTX1Decoder> {
     fn get_name(&self) -> &str {
         self.name
     }
+    /// Gets the popularity for the current decoder
+    fn get_popularity(&self) -> f32 {
+        self.popularity
+    }
     /// Gets the description for the current decoder
     fn get_description(&self) -> &str {
         self.description
@@ -160,7 +164,7 @@ mod tests {
 
     #[test]
     fn citrix_ctx1_handles_substraction_overflow() {
-        // This tests if Citrix CTX1 can handle substraction overflows
+        // This tests if Citrix CTX1 can handle subtraction overflows
         // It should return None and not panic
         let citrix_ctx1_decoder = Decoder::<CitrixCTX1Decoder>::new();
         let result = citrix_ctx1_decoder
