@@ -95,7 +95,7 @@ pub fn parse_cli_args() -> (String, Config) {
 
     trace!("Program was called with CLI 😉");
     trace!("Parsed the arguments");
-    trace!("The inputted text is {}", &input_text);
+    trace!("The inputted text is {}", input_text);
 
     cli_args_into_config_struct(opts, input_text)
 }
@@ -121,7 +121,7 @@ pub fn read_and_parse_file(file_path: String) -> String {
     contents.trim_end_matches(['\n', '\r']).to_owned()
 }
 
-/// Turns our CLI arguments into a config stuct
+/// Turns our CLI arguments into a config struct
 fn cli_args_into_config_struct(opts: Opts, text: String) -> (String, Config) {
     // Get configuration from file first
     let mut config = get_config_file_into_struct();
