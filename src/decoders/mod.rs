@@ -50,6 +50,8 @@ pub mod citrix_ctx1_decoder;
 /// The crack_results module defines the CrackResult
 /// Each and every decoder return same CrackResult
 pub mod crack_results;
+/// The gzip_decoder module decompresses gzip given as Base64 or hex
+pub mod gzip_decoder;
 /// The jwt_decoder module decodes JSON Web Tokens (JWT)
 pub mod jwt_decoder;
 /// The quoted_printable_decoder module decodes Quoted-Printable (RFC 2045)
@@ -122,6 +124,7 @@ use base91_decoder::Base91Decoder;
 use braille_decoder::BrailleDecoder;
 use caesar_decoder::CaesarDecoder;
 use citrix_ctx1_decoder::CitrixCTX1Decoder;
+use gzip_decoder::GzipDecoder;
 use jwt_decoder::JwtDecoder;
 use morse_code::MorseCodeDecoder;
 use octal_decoder::OctalDecoder;
@@ -187,6 +190,8 @@ pub enum DecoderType {
     CitrixCtx1Decoder(citrix_ctx1_decoder::CitrixCTX1Decoder),
     /// jwt decoder
     JwtDecoder(jwt_decoder::JwtDecoder),
+    /// gzip decoder
+    GzipDecoder(gzip_decoder::GzipDecoder),
     /// url decoder
     UrlDecoder(url_decoder::URLDecoder),
     /// unicode escape decoder
@@ -290,6 +295,7 @@ pub static DECODER_MAP: Lazy<HashMap<&str, DecoderBox>> = Lazy::new(|| {
             DecoderBox::new(Decoder::<CitrixCTX1Decoder>::new()),
         ),
         ("JWT", DecoderBox::new(Decoder::<JwtDecoder>::new())),
+        ("Gzip", DecoderBox::new(Decoder::<GzipDecoder>::new())),
         ("URL", DecoderBox::new(Decoder::<URLDecoder>::new())),
         (
             "Unicode Escapes",
