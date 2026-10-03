@@ -365,6 +365,14 @@ input = "\u200B\u200C\u200B\u200B\u200C\u200C\u200B\u200C\u200D\u200B\u200C\u200
 expected = "Meet me at the old lighthouse after midnight and bring the map, the key and a torch."
 
 [[case]]
+# AAEncode (npm aaencode-cli 0.0.2) of "hello world", 1,405 characters
+kind = "single"
+name = "aaencode"
+layers = ["AAEncode"]
+input = '''ﾟωﾟﾉ= /｀ｍ´）ﾉ ~┻━┻   //*´∇｀*/ ["_"]; o=(ﾟｰﾟ)  =_=3; c=(ﾟΘﾟ) =(ﾟｰﾟ)-(ﾟｰﾟ); (ﾟДﾟ) =(ﾟΘﾟ)= (o^_^o)/ (o^_^o);(ﾟДﾟ)={ﾟΘﾟ: "_" ,ﾟωﾟﾉ : ((ﾟωﾟﾉ==3) +"_") [ﾟΘﾟ] ,ﾟｰﾟﾉ :(ﾟωﾟﾉ+ "_")[o^_^o -(ﾟΘﾟ)] ,ﾟДﾟﾉ:((ﾟｰﾟ==3) +"_")[ﾟｰﾟ] }; (ﾟДﾟ) [ﾟΘﾟ] =((ﾟωﾟﾉ==3) +"_") [c^_^o];(ﾟДﾟ) ["c"] = ((ﾟДﾟ)+"_") [ (ﾟｰﾟ)+(ﾟｰﾟ)-(ﾟΘﾟ) ];(ﾟДﾟ) ["o"] = ((ﾟДﾟ)+"_") [ﾟΘﾟ];(ﾟoﾟ)=(ﾟДﾟ) ["c"]+(ﾟДﾟ) ["o"]+(ﾟωﾟﾉ +"_")[ﾟΘﾟ]+ ((ﾟωﾟﾉ==3) +"_") [ﾟｰﾟ] + ((ﾟДﾟ) +"_") [(ﾟｰﾟ)+(ﾟｰﾟ)]+ ((ﾟｰﾟ==3) +"_") [ﾟΘﾟ]+((ﾟｰﾟ==3) +"_") [(ﾟｰﾟ) - (ﾟΘﾟ)]+(ﾟДﾟ) ["c"]+((ﾟДﾟ)+"_") [(ﾟｰﾟ)+(ﾟｰﾟ)]+ (ﾟДﾟ) ["o"]+((ﾟｰﾟ==3) +"_") [ﾟΘﾟ];(ﾟДﾟ) ["_"] =(o^_^o) [ﾟoﾟ] [ﾟoﾟ];(ﾟεﾟ)=((ﾟｰﾟ==3) +"_") [ﾟΘﾟ]+ (ﾟДﾟ) .ﾟДﾟﾉ+((ﾟДﾟ)+"_") [(ﾟｰﾟ) + (ﾟｰﾟ)]+((ﾟｰﾟ==3) +"_") [o^_^o -ﾟΘﾟ]+((ﾟｰﾟ==3) +"_") [ﾟΘﾟ]+ (ﾟωﾟﾉ +"_") [ﾟΘﾟ]; (ﾟｰﾟ)+=(ﾟΘﾟ); (ﾟДﾟ)[ﾟεﾟ]="\\"; (ﾟДﾟ).ﾟΘﾟﾉ=(ﾟДﾟ+ ﾟｰﾟ)[o^_^o -(ﾟΘﾟ)];(oﾟｰﾟo)=(ﾟωﾟﾉ +"_")[c^_^o];(ﾟДﾟ) [ﾟoﾟ]="\'";(ﾟДﾟ) ["_"] ( (ﾟДﾟ) ["_"] (ﾟεﾟ+(ﾟДﾟ)[ﾟoﾟ]+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ (c^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟｰﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ (ﾟｰﾟ)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ (ﾟｰﾟ)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ ((ﾟｰﾟ) + (o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟｰﾟ)+ (c^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((o^_^o) +(o^_^o))+ ((ﾟｰﾟ) + (o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ ((ﾟｰﾟ) + (o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((o^_^o) +(o^_^o))+ ((o^_^o) - (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ (ﾟｰﾟ)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟｰﾟ)+ (ﾟｰﾟ)+ (ﾟДﾟ)[ﾟoﾟ]) (ﾟΘﾟ)) ("_");'''
+expected = "hello world"
+
+[[case]]
 kind = "single"
 name = "ascii85"
 layers = ["Ascii85"]
@@ -662,6 +670,17 @@ name = "nato_phonetic_base64"
 layers = ["NATO Phonetic Alphabet", "Base64"]
 input = "TWlrZS1FY2hvLUVjaG8tVGFuZ28gTWlrZS1FY2hvIEFsZmEtVGFuZ28gVGFuZ28tSG90ZWwtRWNobyBPc2Nhci1MaW1hLURlbHRhIExpbWEtSW5kaWEtR29sZi1Ib3RlbC1UYW5nby1Ib3RlbC1Pc2Nhci1Vbmlmb3JtLVNpZXJyYS1FY2hvIEFsZmEtRm94dHJvdC1UYW5nby1FY2hvLVJvbWVvIE1pa2UtSW5kaWEtRGVsdGEtTm92ZW1iZXItSW5kaWEtR29sZi1Ib3RlbC1UYW5nbyBBbGZhLU5vdmVtYmVyLURlbHRhIEJyYXZvLVJvbWVvLUluZGlhLU5vdmVtYmVyLUdvbGYgVGFuZ28tSG90ZWwtRWNobyBNaWtlLUFsZmEtUGFwYS1Db21tYSBUYW5nby1Ib3RlbC1FY2hvIEtpbG8tRWNoby1ZYW5rZWUgQWxmYS1Ob3ZlbWJlci1EZWx0YSBBbGZhIFRhbmdvLU9zY2FyLVJvbWVvLUNoYXJsaWUtSG90ZWwtU3RvcA=="
 expected = "meet me at the old lighthouse after midnight and bring the map, the key and a torch."
+
+[[case]]
+# AAEncode (npm aaencode-cli 0.0.2) of the Base64 of "hello world", 1,611 characters.
+# An AAEncode program inside Base64 has no case: the search drops intermediate texts of
+# 821 to 5,000 bytes, and the 9 KB Base64 of a longer program takes over the 1 s timeout
+# (tests/aaencode_decoder.rs has one).
+kind = "multi"
+name = "base64_aaencode"
+layers = ["Base64", "AAEncode"]
+input = '''ﾟωﾟﾉ= /｀ｍ´）ﾉ ~┻━┻   //*´∇｀*/ ["_"]; o=(ﾟｰﾟ)  =_=3; c=(ﾟΘﾟ) =(ﾟｰﾟ)-(ﾟｰﾟ); (ﾟДﾟ) =(ﾟΘﾟ)= (o^_^o)/ (o^_^o);(ﾟДﾟ)={ﾟΘﾟ: "_" ,ﾟωﾟﾉ : ((ﾟωﾟﾉ==3) +"_") [ﾟΘﾟ] ,ﾟｰﾟﾉ :(ﾟωﾟﾉ+ "_")[o^_^o -(ﾟΘﾟ)] ,ﾟДﾟﾉ:((ﾟｰﾟ==3) +"_")[ﾟｰﾟ] }; (ﾟДﾟ) [ﾟΘﾟ] =((ﾟωﾟﾉ==3) +"_") [c^_^o];(ﾟДﾟ) ["c"] = ((ﾟДﾟ)+"_") [ (ﾟｰﾟ)+(ﾟｰﾟ)-(ﾟΘﾟ) ];(ﾟДﾟ) ["o"] = ((ﾟДﾟ)+"_") [ﾟΘﾟ];(ﾟoﾟ)=(ﾟДﾟ) ["c"]+(ﾟДﾟ) ["o"]+(ﾟωﾟﾉ +"_")[ﾟΘﾟ]+ ((ﾟωﾟﾉ==3) +"_") [ﾟｰﾟ] + ((ﾟДﾟ) +"_") [(ﾟｰﾟ)+(ﾟｰﾟ)]+ ((ﾟｰﾟ==3) +"_") [ﾟΘﾟ]+((ﾟｰﾟ==3) +"_") [(ﾟｰﾟ) - (ﾟΘﾟ)]+(ﾟДﾟ) ["c"]+((ﾟДﾟ)+"_") [(ﾟｰﾟ)+(ﾟｰﾟ)]+ (ﾟДﾟ) ["o"]+((ﾟｰﾟ==3) +"_") [ﾟΘﾟ];(ﾟДﾟ) ["_"] =(o^_^o) [ﾟoﾟ] [ﾟoﾟ];(ﾟεﾟ)=((ﾟｰﾟ==3) +"_") [ﾟΘﾟ]+ (ﾟДﾟ) .ﾟДﾟﾉ+((ﾟДﾟ)+"_") [(ﾟｰﾟ) + (ﾟｰﾟ)]+((ﾟｰﾟ==3) +"_") [o^_^o -ﾟΘﾟ]+((ﾟｰﾟ==3) +"_") [ﾟΘﾟ]+ (ﾟωﾟﾉ +"_") [ﾟΘﾟ]; (ﾟｰﾟ)+=(ﾟΘﾟ); (ﾟДﾟ)[ﾟεﾟ]="\\"; (ﾟДﾟ).ﾟΘﾟﾉ=(ﾟДﾟ+ ﾟｰﾟ)[o^_^o -(ﾟΘﾟ)];(oﾟｰﾟo)=(ﾟωﾟﾉ +"_")[c^_^o];(ﾟДﾟ) [ﾟoﾟ]="\'";(ﾟДﾟ) ["_"] ( (ﾟДﾟ) ["_"] (ﾟεﾟ+(ﾟДﾟ)[ﾟoﾟ]+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟｰﾟ)+ (ﾟΘﾟ)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (c^_^o)+ ((ﾟｰﾟ) + (o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((o^_^o) - (ﾟΘﾟ))+ ((o^_^o) +(o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((o^_^o) +(o^_^o))+ (o^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟｰﾟ)+ ((o^_^o) - (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (c^_^o)+ ((ﾟｰﾟ) + (o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+((ﾟｰﾟ) + (o^_^o))+ (c^_^o)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟｰﾟ)+ ((ﾟｰﾟ) + (o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟｰﾟ)+ (ﾟｰﾟ)+ (ﾟДﾟ)[ﾟεﾟ]+((o^_^o) +(o^_^o))+ ((o^_^o) - (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+((ﾟｰﾟ) + (o^_^o))+ (ﾟΘﾟ)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((ﾟｰﾟ) + (o^_^o))+ (ﾟΘﾟ)+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (ﾟｰﾟ)+ ((o^_^o) - (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ (c^_^o)+ ((ﾟｰﾟ) + (o^_^o))+ (ﾟДﾟ)[ﾟεﾟ]+(ﾟΘﾟ)+ ((o^_^o) - (ﾟΘﾟ))+ (ﾟΘﾟ)+ (ﾟДﾟ)[ﾟεﾟ]+((ﾟｰﾟ) + (o^_^o))+ ((ﾟｰﾟ) + (ﾟΘﾟ))+ (ﾟДﾟ)[ﾟoﾟ]) (ﾟΘﾟ)) ("_");'''
+expected = "hello world"
 
 [[case]]
 kind = "no_solution"
