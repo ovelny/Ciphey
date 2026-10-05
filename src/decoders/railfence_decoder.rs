@@ -99,9 +99,8 @@ impl Crack for Decoder<RailfenceDecoder> {
 /// rails one after another. So the ciphertext fills rail 0's positions left to right,
 /// then rail 1's, and so on: a stable counting sort of the positions by rail.
 pub(crate) fn railfence_decoder(text: &str, rails: usize, offset: usize) -> String {
-    // Positions run over the byte length, not the character count, as they always
-    // have: for non-ASCII text some positions stay empty and are skipped.
-    let len = text.len();
+    // One position per character, not per byte, so multibyte text decodes correctly.
+    let len = text.chars().count();
     let rail_of: Vec<usize> = zigzag(rails, offset).take(len).collect();
 
     // next[r]: where rail r's next position goes in the rail-by-rail order.
@@ -122,11 +121,11 @@ pub(crate) fn railfence_decoder(text: &str, rails: usize, offset: usize) -> Stri
         next[rail] += 1;
     }
 
-    let mut plaintext: Vec<Option<char>> = vec![None; len];
+    let mut plaintext = vec!['\0'; len];
     for (c, &position) in text.chars().zip(&order) {
-        plaintext[position] = Some(c);
+        plaintext[position] = c;
     }
-    plaintext.into_iter().flatten().collect()
+    plaintext.into_iter().collect()
 }
 
 /// Returns an iterator that yields the indexes of a zigzag pattern with the specified number of rails and offset
@@ -154,9 +153,12 @@ mod tests {
         CheckerTypes::CheckAthena(athena_checker)
     }
 
-    /// `railfence_decoder` as it was before the counting sort.
+    /// `railfence_decoder` as a plain sort, sized by characters.
     fn railfence_decoder_reference(text: &str, rails: usize, offset: usize) -> String {
-        let mut indexes: Vec<_> = zigzag(rails, offset).zip(1..).take(text.len()).collect();
+        let mut indexes: Vec<_> = zigzag(rails, offset)
+            .zip(1..)
+            .take(text.chars().count())
+            .collect();
         indexes.sort();
         let mut char_with_index: Vec<_> = text
             .chars()
@@ -258,6 +260,12 @@ mod tests {
             .crack("", &get_athena_checker())
             .unencrypted_text;
         assert!(result.is_none());
+    }
+
+    #[test]
+    fn railfence_decoder_counts_chars_not_bytes() {
+        // 'Ä' is two bytes; the zigzag must be sized by characters.
+        assert_eq!(railfence_decoder("ÄCEBDF", 2, 0), "ÄBCDEF");
     }
 
     #[test]
